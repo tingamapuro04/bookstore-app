@@ -1,0 +1,53 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+  background: #f5f6fa;
+  font-family: "Montserrat", sans-serif;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  background: #fff;
+}
+
+nav a {
+  text-decoration: none;
+}
+
+.title {
+  font-size: 1.875rem;
+  margin-left: 5%;
+  padding: 4% 0;
+  font-weight: 700;
+  color: #0290ff;
+  margin-right: 5%;
+}
+
+.title-list {
+  display: flex;
+  gap: 15%;
+  list-style: none;
+}
+
+li {
+  list-style: none;
+}
+
+.books {
+  opacity: 0.9;
+  color: #121212;
+  font-size: 0.813rem;
+}
+
+.cats {
+  opacity: 0.5;
+  color: #121212;
+  letter-spacing: 1.9px;
+  font-size: 0.813rem;
+}
