@@ -6,7 +6,7 @@ function Categories() {
     <div>
       <Button name="Check status" />
     </div>
-  )
+  );
 }
 
 export default Categories;

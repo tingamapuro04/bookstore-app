@@ -1,5 +1,4 @@
 import React from 'react';
-import Button from './Button';
 
 function form() {
   return (
@@ -11,7 +10,7 @@ function form() {
         <button type="button" className="form-btn">ADD BOOK</button>
       </form>
     </div>
-  )
+  );
 }
 
-export default form
+export default form;
