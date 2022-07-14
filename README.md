@@ -10,9 +10,6 @@ A book store app that is created with react and redux to manage a collections of
 - JavaScript
 - React/Redux
 
-## Live demo
-[Live Project]()
-
 ## Getting Started
 To get a local copy up and running, follow these simple steps.
 
