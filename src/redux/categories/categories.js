@@ -1,11 +1,11 @@
 const CHECK_STATUS = 'CHECK_STATUS';
 
-const checkStatus = () => ({
+export const checkStatus = () => ({
   type: CHECK_STATUS,
   status: '',
 });
 
-const statusReucer = (state = [], action) => {
+const statusReducer = (state = [], action) => {
   switch (action.type) {
     case CHECK_STATUS:
       return {
@@ -15,3 +15,5 @@ const statusReucer = (state = [], action) => {
     default: return state;
   }
 };
+
+export default statusReducer;
