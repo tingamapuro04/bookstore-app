@@ -1,30 +1,30 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Button from './Button';
-import Form from './Form';
+// import Form from './Form';
 
-function Book({ title, author }) {
+function Book({ title }) {
   return (
     <>
-      <div className="Book">
-        {' '}
-        {title}
-        <br />
-        {author}
-        {' '}
-        <Button name="Remove" />
-      </div>
-      <hr />
-      <div>
-        <Form />
-      </div>
+      <li>
+        <div className="Book">
+          <input type="checkbox" />
+          {' '}
+          <h4>
+            {title}
+            {'  '}
+          </h4>
+          {' '}
+          <Button name="Remove" />
+        </div>
+        <hr />
+      </li>
     </>
   );
 }
 
 Book.propTypes = {
   title: PropTypes.string.isRequired,
-  author: PropTypes.string.isRequired,
 };
 
 export default Book;
