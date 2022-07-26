@@ -13,7 +13,10 @@ export const removeBook = (id) => ({
   id,
 });
 
-const initialState = [];
+const initialState = [
+  { id: 1, title: 'River' },
+  { id: 2, title: 'yeyey' },
+];
 
 const reducer = (state = initialState, action) => {
   switch (action.type) {

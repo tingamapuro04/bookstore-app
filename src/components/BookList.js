@@ -12,7 +12,7 @@ function BookList() {
       </div>
       <ul>
         {books.map((book) => (
-          <Book title={book.title} key={book.id} />
+          <Book title={book.title} key={book.id} id={book.id} />
         ))}
       </ul>
     </>

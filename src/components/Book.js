@@ -1,9 +1,17 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
+import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
 import Button from './Button';
-// import Form from './Form';
+import { removeBook } from '../redux/books/books';
 
-function Book({ title }) {
+function Book({ id, title }) {
+  const dispatch = useDispatch();
+
+  const deleteBook = () => {
+    dispatch(removeBook(id));
+  };
+
   return (
     <>
       <li>
@@ -15,7 +23,7 @@ function Book({ title }) {
             {'  '}
           </h4>
           {' '}
-          <Button name="Remove" />
+          <Button name="Remove" clickMe={deleteBook} />
         </div>
         <hr />
       </li>
