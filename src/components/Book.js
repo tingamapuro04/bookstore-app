@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import Button from './Button';
 import { removeBook } from '../redux/books/books';
 
-function Book({ id, title }) {
+function Book({ id, title, author }) {
   const dispatch = useDispatch();
 
   const deleteBook = () => {
@@ -21,6 +21,7 @@ function Book({ id, title }) {
           <h4>
             {title}
             {'  '}
+            {author}
           </h4>
           {' '}
           <Button name="Remove" clickMe={deleteBook} />

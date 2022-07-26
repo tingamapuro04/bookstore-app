@@ -2,10 +2,11 @@ const ADD_BOOK = 'bookstore/books/ADD_BOOK';
 const REMOVE_BOOK = 'bookstore/books/REMOVE_BOOK';
 
 const nextBook = 0;
-export const addBook = (title) => ({
+export const addBook = (title, author) => ({
   type: ADD_BOOK,
   id: nextBook,
   title,
+  author,
 });
 
 export const removeBook = (id) => ({
