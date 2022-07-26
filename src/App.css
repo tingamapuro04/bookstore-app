@@ -108,3 +108,8 @@ input {
   background: #0290ff;
   font-weight: 700;
 }
+
+.tinga {
+  display: flex;
+  flex-direction: column;
+}

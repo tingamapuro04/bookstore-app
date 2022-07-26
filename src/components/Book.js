@@ -18,11 +18,11 @@ function Book({ id, title, author }) {
         <div className="Book">
           <input type="checkbox" />
           {' '}
-          <h4>
+          <div className="tinga">
             {title}
             {'  '}
             {author}
-          </h4>
+          </div>
           {' '}
           <Button name="Remove" clickMe={deleteBook} />
         </div>

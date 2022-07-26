@@ -15,8 +15,8 @@ export const removeBook = (id) => ({
 });
 
 const initialState = [
-  { id: 1, title: 'River' },
-  { id: 2, title: 'yeyey' },
+  { id: 1, title: 'River', author: 'tinga' },
+  { id: 2, title: 'yeyey', author: 'mapuro' },
 ];
 
 const reducer = (state = initialState, action) => {
@@ -27,6 +27,7 @@ const reducer = (state = initialState, action) => {
         {
           id: state.length + 1,
           title: action.title,
+          author: action.author,
         },
       ];
     case REMOVE_BOOK:

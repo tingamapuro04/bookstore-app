@@ -1,10 +1,12 @@
 import React from 'react';
-import Button from './Button';
+import { useSelector } from 'react-redux';
 
 function Categories() {
+  const cat = useSelector((state) => state.status);
   return (
     <div>
-      <Button name="Check status" />
+      <h1>{cat.status}</h1>
+      <h1>ryryryryryr</h1>
     </div>
   );
 }

@@ -10,10 +10,12 @@ const initialState = [];
 const statusReducer = (state = initialState, action) => {
   switch (action.type) {
     case CHECK_STATUS:
-      return {
+      return [
         ...state,
-        status: state.status.concat('Under Construction.'),
-      };
+        {
+          status: 'Under Construction.',
+        },
+      ];
     default: return state;
   }
 };
