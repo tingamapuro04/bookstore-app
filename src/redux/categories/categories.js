@@ -13,6 +13,7 @@ const statusReducer = (state = initialState, action) => {
       return [
         ...state,
         {
+          id: state.length + 1,
           status: 'Under Construction.',
         },
       ];

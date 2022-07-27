@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
@@ -34,6 +33,8 @@ function Book({ id, title, author }) {
 
 Book.propTypes = {
   title: PropTypes.string.isRequired,
+  id: PropTypes.number.isRequired,
+  author: PropTypes.string.isRequired,
 };
 
 export default Book;
