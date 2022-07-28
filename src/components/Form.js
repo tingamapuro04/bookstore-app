@@ -32,7 +32,7 @@ function Form() {
       <form onSubmit={onSubmit}>
         <input required value={values.title} name="title" onChange={handleTitleValue} type="text" placeholder="Book title" />
         <input onChange={handleAuthorValue} value={values.author} name="author" required type="text" placeholder="Author" />
-        <button type="submit" className="form-btn">ADD BOOK</button>
+        <button type="submit" className="form-btn">ADD NEW</button>
       </form>
     </div>
   );
