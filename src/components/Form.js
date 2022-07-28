@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { addBook } from '../redux/books/books';
+import { addBook } from '../redux/books/book1';
 
 function Form() {
   const [values, setValues] = useState({
@@ -19,10 +19,10 @@ function Form() {
   const onSubmit = (e) => {
     e.preventDefault();
     dispatch(
-      addBook(
-        values.title,
-        values.author,
-      ),
+      addBook({
+        title: values.title,
+        author: values.author,
+      }),
     );
   };
 
