@@ -1,21 +1,33 @@
-import { createSlice } from '@reduxjs/toolkit';
+/* eslint-disable consistent-return */
+import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
+
+export const getBooksAsync = createAsyncThunk(
+  'books/getBooksAsync',
+  async () => {
+    const response = await fetch('https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/Qt6muGB5kLteBCWeTDIt/books');
+    if (response.ok) {
+      const books = await response.json();
+      return { books };
+    }
+  },
+);
 
 const booksSlice = createSlice({
   name: 'books',
-  initialState: [
-    { id: 1, title: 'River', author: 'tinga' },
-    { id: 2, title: 'yeyey', author: 'mapuro' },
-  ],
+  initialState: [],
   reducers: {
     addBook: (state, action) => {
       const newBook = {
-        id: state.length + 1,
+        item_id: state.length + 1,
         title: action.payload.title,
         author: action.payload.author,
       };
       return [...state, newBook];
     },
-    removeBook: (state, action) => state.filter((book) => book.id !== action.id),
+    removeBook: (state, action) => state.filter((book) => book.item_id !== action.item_id),
+  },
+  extraReducers: {
+    [getBooksAsync.fulfilled]: (state, action) => action.payload.books,
   },
 });
 
