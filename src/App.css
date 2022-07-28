@@ -113,3 +113,10 @@ input {
   display: flex;
   flex-direction: column;
 }
+
+.status-btn {
+  background: green;
+  padding: 1%;
+  font-size: 1rem;
+  color: white;
+}

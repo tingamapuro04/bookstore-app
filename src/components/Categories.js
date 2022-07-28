@@ -15,7 +15,7 @@ function Categories() {
       {cat.map((item) => (
         <h1 key={item.id}>{item.status}</h1>
       ))}
-      <button onClick={dispalyCat} type="button">Check Status</button>
+      <button onClick={dispalyCat} type="button" className="status-btn">Check Status</button>
     </div>
   );
 }
