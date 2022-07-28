@@ -93,7 +93,8 @@ input {
 
 .Book {
   display: flex;
-  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
   margin: 3% 7%;
   background: #fff;
   font-size: 2rem;
@@ -106,4 +107,9 @@ input {
   color: white;
   background: #0290ff;
   font-weight: 700;
+}
+
+.tinga {
+  display: flex;
+  flex-direction: column;
 }

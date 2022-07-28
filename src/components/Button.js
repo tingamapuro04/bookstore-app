@@ -1,10 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function Button({ name }) {
+// eslint-disable-next-line react/prop-types
+function Button({ name, clickMe }) {
   return (
     <div>
-      <button type="button" className="All-btn">
+      <button onClick={clickMe} type="button" className="All-btn">
         {' '}
         {name}
         {' '}

@@ -1,29 +1,39 @@
-const BOOK_ADDED = 'BOOK_ADDED';
-const BOOK_REMOVED = 'BOOK_REMOVED';
+const ADD_BOOK = 'bookstore/books/ADD_BOOK';
+const REMOVE_BOOK = 'bookstore/books/REMOVE_BOOK';
 
-let nextBook = 0
-const addBook = author => ({
-  type: BOOK_ADDED,
-  id: nextBook + 1,
+const nextBook = 0;
+export const addBook = (title, author) => ({
+  type: ADD_BOOK,
+  id: nextBook,
+  title,
   author,
 });
 
-const removeBook = () => ({
-  type: BOOK_REMOVED,
+export const removeBook = (id) => ({
+  type: REMOVE_BOOK,
+  id,
 });
 
+const initialState = [
+  { id: 1, title: 'River', author: 'tinga' },
+  { id: 2, title: 'yeyey', author: 'mapuro' },
+];
 
-
-const reducer = (state = [], action) => {
+const reducer = (state = initialState, action) => {
   switch (action.type) {
-    case BOOK_ADDED:
+    case ADD_BOOK:
       return [
         ...state,
         {
-          id: action.id,
+          id: state.length + 1,
+          title: action.title,
           author: action.author,
         },
       ];
+    case REMOVE_BOOK:
+      return state.filter((book) => book.id !== action.id);
     default: return state;
   }
 };
+
+export default reducer;
