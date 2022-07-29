@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { addBook } from '../redux/books/books';
+import { addBookAsync } from '../redux/books/book1';
 
 function Form() {
   const [values, setValues] = useState({
@@ -19,10 +19,12 @@ function Form() {
   const onSubmit = (e) => {
     e.preventDefault();
     dispatch(
-      addBook(
-        values.title,
-        values.author,
-      ),
+      addBookAsync({
+        item_id: Math.random() * 1000,
+        title: values.title,
+        author: values.author,
+        category: 'Fiction',
+      }),
     );
   };
 
@@ -32,7 +34,7 @@ function Form() {
       <form onSubmit={onSubmit}>
         <input required value={values.title} name="title" onChange={handleTitleValue} type="text" placeholder="Book title" />
         <input onChange={handleAuthorValue} value={values.author} name="author" required type="text" placeholder="Author" />
-        <button type="submit" className="form-btn">ADD BOOK</button>
+        <button type="submit" className="form-btn">ADD NEW</button>
       </form>
     </div>
   );
