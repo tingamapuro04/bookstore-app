@@ -9,10 +9,8 @@ export const getBooksAsync = createAsyncThunk(
     const response = await fetch(
       'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/Bprdxe14OldQ8ZgxdRDq/books',
     );
-    if (response.ok) {
-      const books = await response.json();
-      return { books };
-    }
+    const book = await response.json();
+    return book;
   },
 );
 
@@ -61,7 +59,7 @@ const booksSlice = createSlice({
     // removeBook: (state, action) => state.filter((book) => book.item_id !== action.item_id),
   },
   extraReducers: {
-    [getBooksAsync.fulfilled]: (state, action) => action.payload.books,
+    [getBooksAsync.fulfilled]: (state, action) => action.payload.book,
     [addBookAsync.fulfilled]: (state, action) => {
       state[action.payload.item_id] = [{
         title: action.payload.title,
