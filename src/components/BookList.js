@@ -22,7 +22,7 @@ function BookList() {
       </div>
       <ul>
         {unpackedBooks.map((book) => (
-          <Book title={book.title} item_id={Math.random() * 1000} key={Math.random() * 1000} author={book.author} />
+          <Book title={book.title} item_id={book.item_id} key={Math.random() * 1000} author={book.author} />
         ))}
       </ul>
     </>

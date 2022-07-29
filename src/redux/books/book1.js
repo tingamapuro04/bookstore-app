@@ -39,6 +39,13 @@ export const addBookAsync = createAsyncThunk(
   },
 );
 
+// export removeBookAsync = createAsyncThunk(
+//   'books/removeBooksAsync',
+//   async (payload) => {
+//     const response = await fetch()
+//   }
+// )
+
 const booksSlice = createSlice({
   name: 'books',
   initialState: [],
@@ -51,7 +58,7 @@ const booksSlice = createSlice({
       };
       return [...state, newBook];
     },
-    removeBook: (state, action) => state.filter((book) => book.item_id !== action.item_id),
+    // removeBook: (state, action) => state.filter((book) => book.item_id !== action.item_id),
   },
   extraReducers: {
     [getBooksAsync.fulfilled]: (state, action) => action.payload.books,
