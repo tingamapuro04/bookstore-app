@@ -33,9 +33,17 @@ function Form() {
   return (
     <div className="form">
       <h1 className="form-title">ADD NEW BOOK</h1>
-      <form onSubmit={onSubmit}>
+      <form onSubmit={onSubmit} className="form-form">
         <input required value={values.title} name="title" onChange={handleTitleValue} type="text" placeholder="Book title" />
         <input onChange={handleAuthorValue} value={values.author} name="author" required type="text" placeholder="Author" />
+        <select className="Dropdown" name="category" required>
+          <option defaultValue="" disabled selected hidden>
+            Category
+          </option>
+          <option value="Action">Action</option>
+          <option value="Fiction">Fiction</option>
+          <option value="Romance">Romance</option>
+        </select>
         <button type="submit" className="form-btn">ADD NEW</button>
       </form>
     </div>

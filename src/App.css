@@ -5,41 +5,251 @@
 }
 
 body {
-  width: 100%;
-  background: #f5f6fa;
-  font-family: "Montserrat", sans-serif;
+  background-color: #f5f6fa;
 }
 
 .App {
-  margin: 5% 7%;
-  background: #edeffa;
+  margin: 9rem 6.25rem 11.75rem 6.25rem;
+  background-color: #fafafa;
 }
 
-nav {
+.Navigation {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  background: #fff;
-  width: 100%;
-  justify-content: space-around;
+  border-bottom: 2px solid rgba(128, 128, 128, 0.3);
+  background-color: #fff;
+  margin-bottom: 3rem;
 }
 
 nav a {
   text-decoration: none;
 }
 
+.user {
+  height: 3rem;
+  margin-right: 4.625rem;
+}
+
 .title {
+  margin: 1.813rem 2.938rem 1.813rem 4.25rem;
+  font-family: 'Montserrat', sans-serif;
   font-size: 1.875rem;
-  margin-left: 5%;
-  padding: 4% 0;
-  font-weight: 700;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
   color: #0290ff;
-  margin-right: 5%;
+}
+
+.BOOKS {
+  margin: 1.813rem 2.54rem;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.813rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1.9px;
+  color: #121212;
+}
+
+.CATEGORIES {
+  opacity: 0.5;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.813rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1.9px;
+  color: #121212;
+}
+
+.Unordered {
+  margin: 1% 4.25rem;
+}
+
+.Lesson-Panel {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  margin-bottom: 2%;
+  border-radius: 4px;
+  border: solid 1px #e8e8e8;
+  background-color: #fff;
+}
+
+.comments {
+  background: none;
+  padding: 1% 4% 1% 0;
+  border: 2px solid rgba(161, 154, 154, 0.4);
+  border-top: none;
+  border-left: none;
+  border-bottom: none;
+  font-family: 'Roboto Slab', serif;
+  font-size: 1rem;
+  font-weight: 300;
+  letter-spacing: normal;
+  color: #4386bf;
+}
+
+.remove {
+  background: none;
+  font-size: 1rem;
+  padding: 1% 4%;
+  border: 2px solid rgba(161, 154, 154, 0.4);
+  border-top: none;
+  border-left: none;
+  border-bottom: none;
+  font-family: 'Roboto Slab', serif;
+  font-weight: 300;
+  letter-spacing: normal;
+  color: #4386bf;
+}
+
+.edit {
+  background: none;
+  font-size: 1rem;
+  padding: 1% 4%;
+  border: 2px solid rgb(161, 154, 154);
+  border-top: none;
+  border-left: none;
+  border-bottom: none;
+  border-right: none;
+  font-family: 'Roboto Slab', serif;
+  font-weight: 300;
+  letter-spacing: normal;
+  color: #4386bf;
+}
+
+.Book-info {
+  display: flex;
+  align-items: center;
+  gap: 5%;
+  width: 73%;
+}
+
+.Book-Percentage {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10%;
+  width: 35%;
+  margin-right: 6%;
+}
+
+.Progress-Percentage {
+  width: 4.25rem;
+  height: 4.25rem;
+  border-radius: 50%;
+  border: 5px solid #379cf6;
+  border-left-color: #e8e8e8;
+  -webkit-transform: rotate(65deg);
+  transform: rotate(45deg);
+}
+
+.Percentage-1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #121212;
+}
+
+.Percentage-2 {
+  opacity: 0.5;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.875rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+}
+
+.try {
+  font-size: 1rem;
+  border: 1px solid #888;
+  visibility: hidden;
+}
+
+.vertical-separator {
+  display: flex;
+  align-items: center;
+  border: 2px solid rgba(161, 154, 154, 0.3);
+  border-right: none;
+  border-top: none;
+  border-bottom: none;
+  height: 5rem;
+  margin-right: 2.5rem;
+}
+
+.Book-last {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30%;
+}
+
+.current {
+  padding-bottom: 0.4rem;
+  opacity: 0.5;
+  font-family: 'Roboto Slab', serif;
+  font-size: 0.813rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #121212;
+}
+
+.Chapter {
+  padding-bottom: 1.5rem;
+  font-family: 'Roboto Slab', serif;
+  font-size: 1.3rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.4px;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.Update {
+  font-family: 'Roboto Slab', serif;
+  font-size: 0.9rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.5px;
+  text-align: center;
+  color: #fff;
+  padding: 0.438rem 1.188rem 0.5rem 1.375rem;
+  border: none;
+  border-radius: 3px;
+  background-color: #0290ff;
 }
 
 .title-list {
   display: flex;
   list-style: none;
-  gap: 8%;
+  margin-right: auto;
+}
+
+.Oval {
+  margin-right: 7.063rem;
+  padding: 1%;
+  border: 1px solid rgba(128, 128, 128, 0.3);
+  border-radius: 50%;
+  background: none;
+  color: blue;
 }
 
 li {
@@ -64,38 +274,66 @@ li {
 }
 
 .form {
-  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  margin: 1.812rem 4.25rem 3rem 4.35rem;
+  border: 1.4px solid rgba(161, 154, 154, 0.6);
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
+  padding-bottom: 11.7rem;
 }
 
 .form-title {
   color: #888;
   opacity: 1;
   font-size: 1.25rem;
+  margin-top: 1.812rem;
+  margin-bottom: 1.4rem;
+}
+
+.form-form {
+  display: flex;
 }
 
 input {
-  padding: 1.3% 0;
+  padding: 1.3% 14px;
+  font-size: 1rem;
+  font-family: 'Montserrat', sans-serif;
   border-radius: 4px;
   border: 0.7px solid #e8e8e8;
   margin-right: 3%;
-  width: 35%;
+  width: 30%;
+}
+
+.Dropdown {
+  width: 20%;
+  border-radius: 4px;
+  border: 0.7px solid #e8e8e8;
+  padding: 14px;
+  color: #888;
+  font-size: 1rem;
+  background: #fff;
+  margin-right: 3%;
 }
 
 .form-btn {
-  padding: 1.3% 2%;
+  padding: 0.8rem 2%;
   border-radius: 4px;
   border: 0.7px solid #e8e8e8;
   color: white;
   background: #0290ff;
   font-weight: 700;
-  width: 20%;
+  width: 15%;
 }
 
 .Book {
   display: flex;
-  justify-content: space-around;
-  align-items: center;
-  margin: 3% 7%;
+  flex-direction: column;
+  margin-left: 1.688rem;
+  width: 25%;
+  margin-right: 5rem;
+  padding-top: 2.063rem;
   background: #fff;
   font-size: 2rem;
 }
@@ -112,6 +350,45 @@ input {
 .tinga {
   display: flex;
   flex-direction: column;
+}
+
+.Action {
+  opacity: 0.5;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #121212;
+}
+
+.Kichwa {
+  margin-bottom: 0.3rem;
+  font-family: 'Roboto Slab', serif;
+  font-size: 1.575rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.2px;
+  color: #121212;
+}
+
+.Author {
+  font-family: 'Roboto Slab', serif;
+  font-size: 1rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #4386bf;
+}
+
+.btns {
+  padding-bottom: 2rem;
 }
 
 .status-btn {
