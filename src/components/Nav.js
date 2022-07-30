@@ -16,12 +16,6 @@ function Nav() {
         </li>
       </ul>
       <img className="user" src={user} alt="user" />
-      {/* <a href="https://www.flaticon.com/free-icons/user" title="user icons">User icons created by kmg design - Flaticon</a>
-      <button className="Oval" type="button">
-        {' '}
-        <span className="Mask"><BsPerson /></span>
-        {' '}
-      </button> */}
     </nav>
   );
 }
