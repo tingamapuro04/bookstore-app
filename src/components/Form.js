@@ -26,6 +26,8 @@ function Form() {
         category: 'Fiction',
       }),
     );
+    values.author = '';
+    values.title = '';
   };
 
   return (

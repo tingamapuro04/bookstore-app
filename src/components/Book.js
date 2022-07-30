@@ -1,15 +1,14 @@
-/* eslint-disable camelcase */
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
 import Button from './Button';
-import { removeBook } from '../redux/books/mbuks';
+import { removeBookAsync } from '../redux/books/book1';
 
-function Book({ item_id, title, author }) {
+function Book({ itemId, title, author }) {
   const dispatch = useDispatch();
 
   const deleteBook = () => {
-    dispatch(removeBook(item_id));
+    dispatch(removeBookAsync(itemId));
   };
 
   return (
@@ -34,7 +33,7 @@ function Book({ item_id, title, author }) {
 
 Book.propTypes = {
   title: PropTypes.string.isRequired,
-  item_id: PropTypes.number.isRequired,
+  itemId: PropTypes.string.isRequired,
   author: PropTypes.string.isRequired,
 };
 
