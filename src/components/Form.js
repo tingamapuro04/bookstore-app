@@ -6,7 +6,6 @@ function Form() {
   const [values, setValues] = useState({
     title: '',
     author: '',
-    category: '',
   });
   const dispatch = useDispatch();
   const handleTitleValue = (e) => {
@@ -17,9 +16,9 @@ function Form() {
     setValues({ ...values, author: e.target.value });
   };
 
-  const handleCategoryValue = (e) => {
-    setValues({ ...values, category: e.target.value });
-  };
+  // const handleCategoryValue = (e) => {
+  //   setValues({ ...values, category: e.target.value });
+  // };
 
   const onSubmit = (e) => {
     e.preventDefault();
@@ -28,11 +27,9 @@ function Form() {
         item_id: Math.random() * 1000,
         title: values.title,
         author: values.author,
-        category: values.category,
+        category: 'Fiction',
       }),
     );
-    values.author = '';
-    values.title = '';
   };
 
   return (
@@ -41,7 +38,7 @@ function Form() {
       <form onSubmit={onSubmit} className="form-form">
         <input required value={values.title} name="title" onChange={handleTitleValue} type="text" placeholder="Book title" />
         <input onChange={handleAuthorValue} value={values.author} name="author" required type="text" placeholder="Author" />
-        <select className="Dropdown" name="category" required onClick={handleCategoryValue}>
+        <select className="Dropdown" name="category" required>
           <option defaultValue="" disabled selected hidden>
             Category
           </option>
