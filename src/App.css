@@ -407,8 +407,9 @@ input {
 }
 
 .status-btn {
-  background: green;
-  padding: 1%;
+  background: #379cf6;
+  padding: 0.5%;
   font-size: 1rem;
   color: white;
+  border-radius: 5px;
 }
