@@ -6,6 +6,9 @@ Bookstrore app
 ## Project description
 A book store app that is created with react and redux to manage a collections of books.
 
+## Live Demo
+[Live Demo Of The PRoject](https://beautiful-puffpuff-9f47fc.netlify.app/)
+
 ## Built with
 - Html 5
 - Css 3
