@@ -1,7 +1,7 @@
 ## Project title
 Bookstrore app
-
-![](./src/img/BookStore.jpeg)
+# Preview
+![](./src/img/buku.jpeg)
 
 ## Project description
 A book store app that is created with react and redux to manage a collections of books.
